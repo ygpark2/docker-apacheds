@@ -1,4 +1,4 @@
-FROM openjdk:stable-alpine
+FROM openjdk:14-jdk-alpine
 
 ENV ACME_ENABLED false
 ENV ACME_TEST_MODE false
