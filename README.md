@@ -20,7 +20,7 @@ You can also use Docker Compose:
 version: '3'
 services:
   apacheds:
-    image: kadimasolutions/apacheds:latest
+    image: ygpark2/apacheds:latest
     tty: true
     stdin_open: true
     ports:
@@ -43,7 +43,7 @@ Here is an example Docker Compose file. Notice that there is an extra volume tha
 version: '3'
 services:
   apacheds:
-    image: kadimasolutions/apacheds:latest
+    image: ygpark2/apacheds:latest
     tty: true
     stdin_open: true
     environment:
