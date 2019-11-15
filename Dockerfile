@@ -1,5 +1,7 @@
 FROM openjdk:14-jdk-alpine
 
+ENV ADS_INSTANCE_NAME default
+
 ENV ACME_ENABLED false
 ENV ACME_TEST_MODE false
 ENV ACME_DOMAIN hihappyschool.com
