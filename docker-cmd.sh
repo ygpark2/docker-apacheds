@@ -10,7 +10,7 @@ bash /configure-tls.sh
 crond
 
 # Start ApacheDS
-bash bin/apacheds.sh start
+bash bin/apacheds.sh $ADS_INSTANCE_NAME start
 
 # Tail logs
 while [ ! -f instances/default/log/apacheds.out ]; do sleep 1; done
