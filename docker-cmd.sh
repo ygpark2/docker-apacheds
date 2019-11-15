@@ -13,8 +13,8 @@ crond
 bash bin/apacheds.sh $ADS_INSTANCE_NAME start
 
 # Tail logs
-while [ ! -f instances/default/log/apacheds.out ]; do sleep 1; done
-tail -f instances/default/log/apacheds.out &
+while [ ! -f instances/$ADS_INSTANCE_NAME/log/apacheds.out ]; do sleep 1; done
+tail -f instances/$ADS_INSTANCE_NAME/log/apacheds.out &
 
 # Wait for signal
 while true; do sleep 1; done
