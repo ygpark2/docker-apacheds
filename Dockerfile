@@ -2,15 +2,15 @@ FROM openjdk:14-jdk-alpine
 
 ENV ACME_ENABLED false
 ENV ACME_TEST_MODE false
-ENV ACME_DOMAIN example.com
+ENV ACME_DOMAIN hihappyschool.com
 ENV ACME_KEYSTORE_PASSWORD changeit
 # See https://github.com/Neilpang/acme.sh/blob/master/dnsapi/README.md
 ENV ACME_DOMAIN_PROVIDER dns_cf
 
-RUN apk add --no-cache bash dcron openssl unzip wget
+RUN apk add --no-cache bash dcron openssl unzip wget openldap-clients
 
 RUN set -x && \
-    wget -qO /apacheds.zip http://www-us.apache.org/dist//directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25.zip && \
+    wget -qO /apacheds.zip http://www-us.apache.org/dist/directory/apacheds/dist/2.0.0.AM25/apacheds-2.0.0.AM25.zip && \
     mkdir -p /opt/apacheds && \
     unzip /apacheds.zip -d /opt/apacheds && \
     mv /opt/apacheds/apacheds-*/* /opt/apacheds/ && \
